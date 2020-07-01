@@ -1,0 +1,22 @@
+  # cat=basic/enable; type=string; label=Path: Path where the quotations are stored.
+savePath = fileadmin/data/quotation/
+  # cat=basic/enable; type=string; label=Filename Prefix: First part of the filename.
+filenamePrefix = Ang-
+  # cat=basic/enable; type=string; label=Subject: Title subject in the generated Excel file.
+fileSubject = My Company
+  # cat=mail/enable; type=string; label=From: Sender email of the quotation
+mailFrom = john@doe.com
+  # cat=mail/enable; type=string; label=Name: Sender name of the quotation
+mailName = John Doe
+  # cat=mail/enable; type=string; label=To: Recipient emails of the quotation separated by commas
+mailTo = jsmith@example.com
+  # cat=mail/enable; type=string; label=Subject: Subject of the quotation email.
+mailSubject = Quotation Email
+  # cat=mail/enable; type=string; label=File: File of the quotation email.
+mailFile = EXT:quotation_tt_products/Resources/Private/Templates/Mail.html
+
+
+
+
+
+
