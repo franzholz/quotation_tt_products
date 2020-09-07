@@ -22,9 +22,7 @@ Enter these lines into the Shop Template inside of the HTML form of the subpart 
 
 ...
 
-<form method="post" action="###FORM_URL###" name="warenkorbform">
 
-...
 <script>
 function anexport() {
  document.warenkorbform.action = "###FORM_URL###&amp;eID=export_excel";
@@ -32,6 +30,12 @@ function anexport() {
  document.warenkorbform.action = "###FORM_URL###";
 }
 </script>
+
+...
+
+<form method="post" action="###FORM_URL###" name="warenkorbform">
+
+...
 
 <input type="button" name="ex" value="Export as Quotation (XLS)" onclick="anexport();">
 

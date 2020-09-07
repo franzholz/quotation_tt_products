@@ -570,6 +570,5 @@ class ExcelController implements \TYPO3\CMS\Core\SingletonInterface {
         header('Expires: 0'); 
         readfile($file);
     }
-
 }
 

@@ -1,2 +1,5 @@
+2020-09-07 Franz Holzinger <franz@ttproducts.de>
+    * bugfix for TYPO3 9.5 and if tt_products has not been installed
+
 2020-07-01 Franz Holzinger <franz@ttproducts.de>
     * initial creation
