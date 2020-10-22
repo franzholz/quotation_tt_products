@@ -57,9 +57,11 @@ class ExcelController implements \TYPO3\CMS\Core\SingletonInterface {
         $cObj = \JambageCom\Div2007\Utility\FrontendUtility::getContentObjectRenderer();
         $conf = $GLOBALS['TSFE']->tmpl->setup['plugin.'][TT_PRODUCTS_EXT . '.'];
         $config = $GLOBALS['TYPO3_CONF_VARS']['EXTCONF'][QUOTATION_TT_PRODUCTS_EXT];
-        $itemArray = \JambageCom\TtProducts\Api\BasketApi::readItemArray();
-        $calculatedArray = \JambageCom\TtProducts\Api\BasketApi::readCalculatedArray();
-        $basketExtra = \JambageCom\TtProducts\Api\BasketApi::readBasketExtra();
+        $basketApi = GeneralUtility::makeInstance(\JambageCom\TtProducts\Api\BasketApi::class);
+
+        $itemArray = $basketApi->readItemArray();
+        $calculatedArray = $basketApi->readCalculatedArray();
+        $basketExtra = $basketApi->readBasketExtra();
         if (
             empty($itemArray) ||
             empty($calculatedArray) ||
