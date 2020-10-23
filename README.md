@@ -2,7 +2,7 @@
 
 ## What is does
 
-This extension gives you the possibility to export the current basket view into an Excel file. This can be used to make an automatically generated quotation.
+This extension gives you the possibility to export the current basket view of tt_products into an Excel file. This can be used to make an automatically generated quotation.
 
 This extension is used by tt_products.
 
