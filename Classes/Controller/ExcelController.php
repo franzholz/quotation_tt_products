@@ -542,7 +542,8 @@ class ExcelController implements \TYPO3\CMS\Core\SingletonInterface {
         if ($mailFile) {
 
             // mail file is fetched.
-            $mailBody = $cObj->fileResource($mailFile);
+            $pathFilename = $GLOBALS['TSFE']->tmpl->getFileName($mailFile);
+            $mailBody = file_get_contents($pathFilename);
         }
 
         $recipients = GeneralUtility::trimExplode(',', $config['mailTo']);
