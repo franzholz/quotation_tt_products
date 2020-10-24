@@ -50,10 +50,10 @@ use JambageCom\Div2007\Utility\FrontendUtility;
 
 class TtProductsMarker implements \TYPO3\CMS\Core\SingletonInterface {
 
-
     public function addURLMarkers (
         $pObj,
         $cObj,
+        $theCode,
         $pidNext,
         &$markerArray,
         $addQueryString,
@@ -64,6 +64,9 @@ class TtProductsMarker implements \TYPO3\CMS\Core\SingletonInterface {
         $target = '',
         $excludeSingleVar = true
     ) {
+        if ($theCode != 'BASKET') {
+            return false;
+        }
         $charset = 'UTF-8';
         $cnfObj = GeneralUtility::makeInstance('tx_ttproducts_config');
         $conf = $cnfObj->getConf();
@@ -100,6 +103,7 @@ class TtProductsMarker implements \TYPO3\CMS\Core\SingletonInterface {
 ';
         $JSfieldname = 'tx_quotation_tt_products-excel';
         $GLOBALS['TSFE']->additionalHeaderData[$JSfieldname] = $code;
+        return true;
     }
 }
 

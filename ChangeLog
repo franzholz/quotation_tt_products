@@ -1,3 +1,8 @@
+
+
+2020-10-24 Franz Holzinger <franz@ttproducts.de>
+    * bugfix: use an additional code parameter for the tt_products hook addURLMarkers.
+
 2020-09-07 Franz Holzinger <franz@ttproducts.de>
     * bugfix for TYPO3 9.5 and if tt_products has not been installed
 
