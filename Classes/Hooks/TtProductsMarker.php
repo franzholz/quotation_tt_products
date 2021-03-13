@@ -51,7 +51,7 @@ use JambageCom\Div2007\Utility\FrontendUtility;
 class TtProductsMarker implements \TYPO3\CMS\Core\SingletonInterface {
 
     public function addURLMarkers (
-        $pObj,
+        \tx_ttproducts_url_view $pObj,
         $cObj,
         $theCode,
         $pidNext,
@@ -83,10 +83,9 @@ class TtProductsMarker implements \TYPO3\CMS\Core\SingletonInterface {
                 false,
                 0
             ),
-            $target,
-            $conf
+            $target
         );
-    debug ($url, 'hook $url');
+
         $markerArray['###FORM_URL_QUOTATION_JSVALUE###'] = $jsUrl = GeneralUtility::quoteJSvalue($url);
 
         $code = '<script>

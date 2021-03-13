@@ -1,4 +1,5 @@
-
+2020-11-03 Franz Holzinger <franz@ttproducts.de>
+    * bugfix: remove wrong parameter $conf for getTypoLink_URL.
 
 2020-10-24 Franz Holzinger <franz@ttproducts.de>
     * bugfix: use an additional code parameter for the tt_products hook addURLMarkers.
